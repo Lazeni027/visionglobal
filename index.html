@@ -1,71 +1,34 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vision Globale - Lunettes PhotoGray | Protection & Style</title>
-    <meta name="description" content="Lunettes PhotoGray Vision Globale - Verres anti-reflet, protection UV400, adaptables à la lumière. 10 000 FCFA, livraison gratuite en Côte d'Ivoire.">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vision Globale - Lunettes PhotoGray</title>
+    <meta name="description" content="Lunettes PhotoGray Vision Globale - Verres anti-reflet, UV400, adaptables à la lumière. 10 000 FCFA, livraison gratuite en Côte d'Ivoire." />
     <style>
-        /* ===== RESET & VARIABLES ===== */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
             --gold: #FCB42B;
-            --gold-light: #E0D0B0;
             --dark: #1A1A1A;
-            --dark-secondary: #2C2C2C;
-            --white: #FFFFFF;
+            --white: #fff;
             --off-white: #F5F3EF;
-            --gray: #666666;
-            --light-gray: #999999;
-            --red-accent: #C0392B;
-            --green-accent: #27AE60;
-            --transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --gray: #666;
+            --light-gray: #999;
+            --red: #C0392B;
+            --green: #27AE60;
         }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
+        html { scroll-behavior: smooth; }
         body {
-            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            font-family: 'Segoe UI', Arial, sans-serif;
             line-height: 1.7;
             color: var(--dark);
-            background-color: var(--white);
+            background: var(--white);
             overflow-x: hidden;
-            -webkit-font-smoothing: antialiased;
         }
-
-        /* ===== TYPOGRAPHIE ===== */
-        h1, h2, h3 {
-            font-weight: 700;
-            line-height: 1.2;
-        }
-
-        h1 {
-            font-size: clamp(2.2rem, 5vw, 3.5rem);
-            letter-spacing: -0.5px;
-        }
-
-        h2 {
-            font-size: clamp(1.8rem, 4vw, 2.5rem);
-            text-align: center;
-            margin-bottom: 1rem;
-            position: relative;
-        }
-
-        .section-subtitle {
-            text-align: center;
-            color: var(--gray);
-            font-size: 1.1rem;
-            margin-bottom: 3rem;
-        }
-
-        /* ===== BOUTONS ===== */
+        h1, h2, h3 { font-weight: 700; line-height: 1.2; }
+        h1 { font-size: clamp(2.2rem, 5vw, 3.5rem); }
+        h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); text-align: center; margin-bottom: 1rem; }
+        .section-subtitle { text-align: center; color: var(--gray); font-size: 1.1rem; margin-bottom: 3rem; }
         .btn {
             display: inline-flex;
             align-items: center;
@@ -76,37 +39,16 @@
             text-decoration: none;
             border-radius: 50px;
             cursor: pointer;
-            transition: var(--transition);
+            transition: all 0.3s ease;
             border: 2px solid transparent;
-            letter-spacing: 0.3px;
         }
-
         .btn-primary {
             background: var(--gold);
             color: var(--dark);
             border-color: var(--gold);
             box-shadow: 0 4px 15px rgba(200, 169, 110, 0.3);
         }
-
-        .btn-primary:hover {
-            background: #B8944F;
-            border-color: #B8944F;
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(200, 169, 110, 0.4);
-        }
-
-        .btn-outline {
-            background: transparent;
-            color: var(--dark);
-            border-color: var(--dark);
-        }
-
-        .btn-outline:hover {
-            background: var(--dark);
-            color: var(--white);
-            transform: translateY(-3px);
-        }
-
+        .btn-primary:hover { background: #B8944F; border-color: #B8944F; transform: translateY(-3px); }
         .btn-whatsapp {
             background: #25D366;
             color: #fff;
@@ -117,82 +59,45 @@
             z-index: 1000;
             box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35);
             animation: pulse 2s infinite;
-            font-size: 1rem;
             padding: 0.9rem 1.8rem;
         }
-
-        .btn-whatsapp:hover {
-            background: #1DA851;
-            border-color: #1DA851;
-            animation: none;
-            transform: scale(1.08);
-        }
-
+        .btn-whatsapp:hover { background: #1DA851; transform: scale(1.08); }
         @keyframes pulse {
             0%, 100% { box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35); }
             50% { box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6); }
         }
-
-        /* ===== NAVIGATION ===== */
         .navbar {
+            background-color: #ffffff;
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            z-index: 999;
+            z-index: 1000;
             padding: 1rem 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            transition: var(--transition);
-            background: transparent;
+            transition: all 0.0s ease;
+        
         }
-
         .navbar.scrolled {
-            background: rgba(255, 255, 255, 0.97);
+            background: rgba(255,255,255,0.97);
             backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 4px 30px rgba(0,0,0,0.08);
             padding: 0.7rem 5%;
         }
-
-        .logo {
-            font-size: 1.6rem;
-            font-weight: 700;
-            color: var(--white);
-            text-decoration: none;
-            letter-spacing: 1px;
-            transition: var(--transition);
-        }
-
-        .navbar.scrolled .logo {
-            color: var(--dark);
-        }
-
-        .logo span {
-            color: var(--gold);
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-            align-items: center;
-        }
-
+        .logo { font-size: 1.6rem; font-weight: 700; color: var(--white); text-decoration: none; }
+        .navbar.scrolled .logo { color: var(--dark); }
+        .logo span { color: var(--gold); }
+        .nav-links { display: flex; list-style: none; gap: 2rem; align-items: center; }
         .nav-links a {
             text-decoration: none;
-            color: var(--white);
             font-weight: 500;
             font-size: 0.95rem;
-            transition: var(--transition);
+            transition: all 0.3s ease;
             position: relative;
         }
-
-        .navbar.scrolled .nav-links a {
-            color: var(--dark);
-        }
-
+        .navbar.scrolled .nav-links a { color: var(--dark); }
         .nav-links a::after {
             content: '';
             position: absolute;
@@ -201,13 +106,9 @@
             width: 0;
             height: 2px;
             background: var(--gold);
-            transition: var(--transition);
+            transition: all 0.3s ease;
         }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
+        .nav-links a:hover::after { width: 100%; }
         .nav-cta {
             background: var(--gold) !important;
             color: var(--dark) !important;
@@ -215,17 +116,7 @@
             border-radius: 50px !important;
             font-weight: 600 !important;
         }
-
-        .nav-cta:hover::after {
-            width: 0 !important;
-        }
-
-        .nav-cta:hover {
-            background: #B8944F !important;
-            transform: scale(1.05);
-        }
-
-        /* Menu mobile */
+        .nav-cta:hover { background: #B8944F !important; transform: scale(1.05); }
         .hamburger {
             display: none;
             flex-direction: column;
@@ -233,20 +124,8 @@
             cursor: pointer;
             z-index: 1001;
         }
-
-        .hamburger span {
-            width: 28px;
-            height: 3px;
-            background: var(--white);
-            border-radius: 3px;
-            transition: var(--transition);
-        }
-
-        .navbar.scrolled .hamburger span {
-            background: var(--dark);
-        }
-
-        /* ===== HERO SECTION (Axe Désir) ===== */
+        .hamburger span { width: 28px; height: 3px; background: var(--white); border-radius: 3px; transition: all 0.3s ease; }
+        .navbar.scrolled .hamburger span { background: var(--dark); }
         .hero {
             min-height: 100vh;
             display: flex;
@@ -259,7 +138,6 @@
             position: relative;
             overflow: hidden;
         }
-
         .hero::before {
             content: '';
             position: absolute;
@@ -267,51 +145,25 @@
             right: -20%;
             width: 600px;
             height: 600px;
-            background: radial-gradient(circle, rgba(200, 169, 110, 0.15) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(200,169,110,0.15) 0%, transparent 70%);
             border-radius: 50%;
         }
-
-        .hero-content {
-            max-width: 600px;
-            z-index: 2;
-        }
-
+        .hero-content { max-width: 600px; z-index: 2; }
         .hero-badge {
             display: inline-block;
-            background: rgba(200, 169, 110, 0.2);
+            background: rgba(200,169,110,0.2);
             color: var(--gold);
             padding: 0.5rem 1.3rem;
             border-radius: 50px;
             font-size: 0.9rem;
             font-weight: 600;
-            letter-spacing: 2px;
             text-transform: uppercase;
             margin-bottom: 1.5rem;
-            border: 1px solid rgba(200, 169, 110, 0.3);
+            border: 1px solid rgba(200,169,110,0.3);
         }
-
-        .hero h1 {
-            margin-bottom: 1.2rem;
-        }
-
-        .hero h1 span {
-            color: var(--gold);
-        }
-
-        .hero p {
-            font-size: 1.15rem;
-            color: #CCCCCC;
-            margin-bottom: 2rem;
-            max-width: 450px;
-        }
-
-        .hero-features {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin-bottom: 2.5rem;
-        }
-
+        .hero h1 span { color: var(--gold); }
+        .hero p { font-size: 1.15rem; color: #ccc; margin-bottom: 2rem; max-width: 450px; }
+        .hero-features { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 2.5rem; }
         .hero-feature {
             display: flex;
             align-items: center;
@@ -322,56 +174,57 @@
             font-size: 0.9rem;
             font-weight: 500;
         }
+        .hero-price { font-size: 2.5rem; font-weight: 800; color: var(--gold); }
+        .hero-price-small { font-size: 0.9rem; color: var(--light-gray); margin-bottom: 2rem; }
+        .hero-buttons { display: flex; gap: 1rem; flex-wrap: wrap; }
+        .hero-image { position: relative; z-index: 2; animation: float 6s ease-in-out infinite; }
+        .hero-image img { max-width: 400px; width: 200%; border-radius: 25px; filter: drop-shadow(0 30px 40px rgba(0,0,0,0.5)); }
+        @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
 
-        .hero-feature .icon {
-            font-size: 1.2rem;
+        /* ===== NOUVEAU : GRILLE CONTEXTES ===== */
+        .section-contextes {
+            padding: 4rem 5%;
+            /* background: var(--white); */
+            color: black;
         }
-
-        .hero-price {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: var(--gold);
+         .contextes-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .contexte-card {
+            text-align: center;
+            padding: 1.5rem 1rem;
+            border-radius: 16px;
+            background: var(--off-white);
+            transition: all 0.3s ease;
+            border: 1px solid #eee;
+        }
+        .contexte-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+            border-color: var(--gold);
+        }
+        .contexte-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 1rem;
+        }
+        .contexte-card h3 {
+            font-size: 1.1rem;
+            color: var(--dark);
             margin-bottom: 0.3rem;
         }
-
-        .hero-price-small {
+        .contexte-card p {
             font-size: 0.9rem;
-            color: var(--light-gray);
-            margin-bottom: 2rem;
+            color: var(--gray);
         }
 
-        .hero-buttons {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .hero-image {
-            position: relative;
-            z-index: 2;
-            animation: float 6s ease-in-out infinite;
-        }
-
-        .hero-image img {
-            max-width: 400px;
-            width: 100%;
-            height: auto;
-            border-radius: 25px;
-            filter: drop-shadow(0 30px 40px rgba(0, 0, 0, 0.5));
-            object-fit: cover;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-        }
-
-        /* ===== SECTION PROBLÈME (Axe Douleur) ===== */
-        .section-pain {
-            padding: 6rem 5%;
-            background: var(--off-white);
-        }
-
+        .section-pain { padding: 6rem 5%; }
         .pain-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -379,106 +232,47 @@
             max-width: 1100px;
             margin: 0 auto;
         }
-
         .pain-card {
             background: var(--white);
             padding: 2.5rem 2rem;
             border-radius: 20px;
             text-align: center;
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            transition: var(--transition);
+            transition: all 0.3s ease;
             border: 1px solid #eee;
         }
-
-        .pain-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-        }
-
-        .pain-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .pain-card h3 {
-            font-size: 1.2rem;
-            margin-bottom: 0.8rem;
-            color: var(--red-accent);
-        }
-
-        .pain-card p {
-            color: var(--gray);
-            font-size: 0.95rem;
-        }
-
-        .pain-arrow {
-            text-align: center;
-            font-size: 2rem;
-            margin: 3rem 0;
-            color: var(--gold);
-        }
-
+        .pain-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .pain-card h3 { font-size: 1.2rem; margin: 1rem 0 0.8rem; color: var(--red); }
+        .pain-card p { color: var(--gray); font-size: 0.95rem; }
+        .pain-arrow { text-align: center; font-size: 2rem; margin: 3rem 0; color: var(--gold); }
         .solution-box {
-            background: var(--white);
             border: 2px solid var(--gold);
             border-radius: 20px;
             padding: 2.5rem 2rem;
             text-align: center;
             max-width: 600px;
             margin: 0 auto;
-            box-shadow: 0 15px 35px rgba(200, 169, 110, 0.15);
+            box-shadow: 0 15px 35px rgba(200,169,110,0.15);
         }
-
-        .solution-box h3 {
-            color: var(--green-accent);
-            margin-bottom: 0.5rem;
-        }
-
-        .solution-checkmarks {
-            list-style: none;
-            text-align: left;
-            display: inline-block;
-            margin: 1.5rem 0;
-        }
-
-        .solution-checkmarks li {
-            margin-bottom: 0.7rem;
-            font-size: 0.95rem;
-        }
-
-        /* ===== SECTION PRODUIT ===== */
-        .section-product {
-            padding: 6rem 5%;
-            background: var(--white);
-        }
-
+        .solution-box h3 { color: var(--green); margin-bottom: 0.5rem; }
+        .solution-checkmarks { list-style: none; display: inline-block; margin: 1.5rem 0; text-align: left; }
+        .solution-checkmarks li { margin-bottom: 0.7rem; font-size: 0.95rem; }
+        .section-product { padding: 6rem 5%; }
         .product-container {
-            max-width: 1100px;
+            max-width: 95%;
             margin: 0 auto;
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
             align-items: center;
         }
-
-        .product-image {
-            text-align: center;
-            position: relative;
-        }
-
-        .product-image img {
-            max-width: 400px;
-            width: 100%;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            object-fit: cover;
-        }
-
+        .product-image { text-align: center; position: relative; }
+        .product-image img { max-width: 400px; width: 100%; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
         .product-badge-offer {
             position: absolute;
             top: 20px;
             right: 20px;
-            background: var(--red-accent);
+            background: var(--red);
             color: #fff;
             padding: 0.4rem 1rem;
             border-radius: 50px;
@@ -487,76 +281,22 @@
             animation: pulse 2s infinite;
             z-index: 3;
         }
-
-        .product-info h2 {
-            text-align: left;
-            margin-bottom: 1rem;
-        }
-
-        .product-info .price-display {
-            font-size: 2.8rem;
-            font-weight: 800;
-            color: var(--gold);
-            margin-bottom: 0.3rem;
-        }
-
-        .product-info .price-detail {
-            color: var(--gray);
-            font-size: 0.9rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .product-specs {
-            list-style: none;
-            margin-bottom: 2rem;
-        }
-
-        .product-specs li {
-            padding: 0.6rem 0;
-            border-bottom: 1px solid #eee;
-            font-size: 0.95rem;
-        }
-
-        .product-specs li::before {
-            content: '✓ ';
-            color: var(--green-accent);
-            font-weight: bold;
-        }
-
-        /* ===== SECTION URGENCE ===== */
+        .product-info h2 { text-align: left; }
+        .product-info .price-display { font-size: 2.8rem; font-weight: 800; color: var(--gold); }
+        .product-info .price-detail { color: var(--gray); font-size: 0.9rem; margin: 0 0 1.5rem; }
+        .product-specs { list-style: none; margin-bottom: 2rem; }
+        .product-specs li { padding: 0.6rem 0; border-bottom: 1px solid #eee; font-size: 0.95rem; }
+        .product-specs li::before { content: '✓ '; color: var(--green); font-weight: bold; }
         .section-urgency {
             padding: 4rem 5%;
             background: linear-gradient(135deg, #1A1A1A, #2C2C2C);
             color: var(--white);
             text-align: center;
         }
-
-        .urgency-banner {
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .urgency-banner h2 {
-            color: var(--white);
-            margin-bottom: 1rem;
-        }
-
-        .urgency-banner .timer {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: var(--gold);
-            margin: 1.5rem 0;
-            letter-spacing: 3px;
-        }
-
-        .urgency-highlights {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-
+        .urgency-banner { max-width: 700px; margin: 0 auto; }
+        .urgency-banner h2 { color: var(--white); }
+        .urgency-banner .timer { font-size: 2.5rem; font-weight: 800; color: var(--gold); margin: 1.5rem 0; letter-spacing: 3px; }
+        .urgency-highlights { display: flex; justify-content: center; flex-wrap: wrap; gap: 1.5rem; margin: 2rem 0; }
         .urgency-highlight {
             background: rgba(255,255,255,0.08);
             padding: 1rem 1.8rem;
@@ -564,13 +304,7 @@
             font-weight: 500;
             font-size: 0.95rem;
         }
-
-        /* ===== SECTION TÉMOIGNAGES ===== */
-        .section-testimonials {
-            padding: 6rem 5%;
-            background: var(--off-white);
-        }
-
+        .section-testimonials { padding: 6rem 5%;}
         .testimonials-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -578,7 +312,6 @@
             max-width: 1100px;
             margin: 0 auto;
         }
-
         .testimonial-card {
             background: var(--white);
             padding: 2rem;
@@ -587,297 +320,304 @@
             border-left: 4px solid var(--gold);
         }
 
-        .testimonial-avatar {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 1rem;
-            border: 2px solid var(--gold);
+        .pain-card img {
+            width: 95%;
         }
 
-        .testimonial-stars {
-            color: var(--gold);
-            font-size: 1.2rem;
-            margin-bottom: 0.8rem;
-        }
 
-        .testimonial-text {
-            font-style: italic;
-            color: #555;
-            margin-bottom: 1rem;
-            font-size: 0.95rem;
-        }
 
-        .testimonial-author {
-            font-weight: 700;
-            color: var(--dark);
-            font-size: 0.9rem;
-        }
-
-        /* ===== SECTION FAQ ===== */
-        .section-faq {
-            padding: 6rem 5%;
-            background: var(--white);
-        }
-
-        .faq-container {
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .faq-item {
-            border-bottom: 1px solid #eee;
-            padding: 1.2rem 0;
-            cursor: pointer;
-        }
-
-        .faq-question {
-            font-weight: 600;
-            font-size: 1.05rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
+        .testimonial-stars { color: var(--gold); font-size: 1.2rem; margin-bottom: 0.8rem; }
+        .testimonial-text { font-style: italic; color: #555; margin-bottom: 1rem; font-size: 0.95rem; }
+        .testimonial-author { font-weight: 700; }
+        .section-faq { padding: 6rem 5%; background: transparent; }
+        .faq-container { max-width: 700px; margin: 0 auto; }
+        .faq-item { border-bottom: 1px solid #eee; padding: 1.2rem 0; cursor: pointer; }
+        .faq-question { font-weight: 600; font-size: 1.05rem; display: flex; justify-content: space-between; align-items: center; }
         .faq-answer {
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.4s ease, padding 0.4s ease;
             color: var(--gray);
             font-size: 0.95rem;
+        } 
+        .faq-item.active .faq-answer { max-height: 200px; padding-top: 1rem; }
+        .faq-item.active .faq-question .faq-arrow { transform: rotate(180deg); }
+        .faq-arrow { transition: all 0.3s ease; font-size: 1.2rem; color: var(--gold); }
+        .footer { background: var(--dark); color: #aaa; padding: 3rem 5%; text-align: center; }
+        .footer-logo { font-size: 1.5rem; font-weight: 700; color: var(--white); margin-bottom: 1rem; }
+        .footer-logo span { color: var(--gold); }
+        .footer-contact { margin: 1.5rem 0; color: var(--gold); font-weight: 600; }
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(6px);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+            padding: 1.5rem;
         }
-
-        .faq-item.active .faq-answer {
-            max-height: 200px;
-            padding-top: 1rem;
+        .modal-overlay.active { display: flex; }
+        .modal-form {
+            background: var(--white);
+            max-width: 520px;
+            width: 100%;
+            padding: 2rem;
+            border-radius: 28px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+            position: relative;
+            max-height: 95vh;
+            overflow-y: auto;
         }
-
-        .faq-item.active .faq-question .faq-arrow {
-            transform: rotate(180deg);
+        .modal-form .close-btn {
+            position: absolute;
+            top: 1rem;
+            right: 1.2rem;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: var(--gray);
+            background: none;
+            border: none;
+            transition: all 0.3s ease;
         }
-
-        .faq-arrow {
-            transition: var(--transition);
-            font-size: 1.2rem;
-            color: var(--gold);
+        .modal-form .close-btn:hover { color: var(--dark); transform: rotate(90deg); }
+        .modal-form h3 { font-size: 1.6rem; margin-bottom: 0.3rem; display: flex; align-items: center; gap: 10px; }
+        .modal-form .sub { color: var(--gray); font-size: 0.95rem; margin-bottom: 1.8rem; }
+        .modal-form .form-group { margin-bottom: 1.2rem; }
+        .modal-form label { display: block; font-weight: 600; font-size: 0.9rem; margin-bottom: 0.3rem; }
+        .modal-form input,
+        .modal-form textarea {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 1.5px solid #e0e0e0;
+            border-radius: 60px;
+            font-size: 1rem;
+            background: var(--white);
+            transition: all 0.3s ease;
+            outline: none;
         }
-
-        /* ===== FOOTER ===== */
-        .footer {
-            background: var(--dark);
-            color: #aaa;
-            padding: 3rem 5%;
-            text-align: center;
-        }
-
-        .footer-logo {
-            font-size: 1.5rem;
+        .modal-form input:focus,
+        .modal-form textarea:focus { border-color: var(--gold); box-shadow: 0 0 0 4px rgba(252,180,43,0.12); }
+        .modal-form textarea { border-radius: 20px; resize: vertical; min-height: 70px; }
+        .modal-form .btn-submit {
+            width: 100%;
+            justify-content: center;
+            padding: 1rem;
+            font-size: 1.1rem;
+            background: #25D366;
+            border: none;
+            color: white;
+            border-radius: 60px;
             font-weight: 700;
-            color: var(--white);
-            margin-bottom: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 18px rgba(37,211,102,0.3);
+            margin-top: 0.5rem;
         }
-
-        .footer-logo span {
-            color: var(--gold);
+        .modal-form .btn-submit:hover { background: #1DA851; transform: scale(1.01); }
+        .modal-form .note { font-size: 0.8rem; color: var(--gray); text-align: center; margin-top: 1rem; }
+        .btn-commander-article {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--gold);
+            color: var(--dark);
+            padding: 0.8rem 1.8rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(200,169,110,0.3);
+            margin-top: 0.5rem;
         }
+        .btn-commander-article:hover { background: #B8944F; transform: translateY(-2px); }
 
-        .footer p {
-            font-size: 0.9rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .footer-contact {
-            margin: 1.5rem 0;
-            color: var(--gold);
-            font-weight: 600;
-        }
-
-        /* ===== RESPONSIVE ===== */
         @media (max-width: 1024px) {
-            .hero {
-                flex-direction: column;
-                text-align: center;
-                padding-top: 7rem;
-            }
-            .hero-content {
-                margin-bottom: 3rem;
-            }
-            .hero p {
-                max-width: 100%;
-            }
-            .hero-features {
-                justify-content: center;
-            }
-            .hero-buttons {
-                justify-content: center;
-            }
-            .hero-image img {
-                max-width: 300px;
-            }
-            .product-container {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-            .product-info h2 {
-                text-align: center;
-            }
-            .product-specs {
-                text-align: left;
-                max-width: 400px;
-                margin: 0 auto 2rem;
-            }
-            .product-image img {
-                max-width: 300px;
-            }
+            .hero { flex-direction: column; text-align: center; padding-top: 7rem; }
+            .hero p { max-width: 100%; }
+            .hero-features { justify-content: center; }
+            .hero-buttons { justify-content: center; }
+            .hero-image img { max-width: 300px; }
+            .product-container { grid-template-columns: 1fr; text-align: center; }
+            .product-info h2 { text-align: center; }
+            .product-specs { text-align: left; max-width: 400px; margin: 0 auto 2rem; }
+            .contextes-grid { grid-template-columns: repeat(2, 1fr); }
             .nav-links {
                 position: fixed;
                 top: 54px;
-                bottom: -100px;
                 right: -100%;
                 height: 40vh;
                 background: var(--white);
                 flex-direction: column;
                 gap: 1.5rem;
-                transition: var(--transition);
+                transition: all 0.3s ease;
                 box-shadow: -10px 0 30px rgba(0,0,0,0.1);
             }
-            .nav-links.active {
-                right: 0;
-            }
-            .nav-links a {
-                color: var(--dark) !important;
-                font-size: 1.3rem;
-            }
-            .hamburger {
-                display: flex;
-            }
-            .btn-whatsapp {
-                bottom: 20px;
-                right: 20px;
-                font-size: 0.9rem;
-                padding: 0.8rem 1.5rem;
-            }
+            .nav-links.active { right: 0; }
+            .nav-links a { color: var(--dark) !important; font-size: 1.3rem; }
+            .hamburger { display: flex; }
+            .btn-whatsapp { bottom: 20px; right: 20px; font-size: 0.9rem; padding: 0.8rem 1.5rem; }
         }
-
         @media (max-width: 600px) {
-            .hero-image img {
-                max-width: 240px;
-            }
-            .product-image img {
-                max-width: 240px;
-            }
-            .pain-grid {
-                grid-template-columns: 1fr;
-            }
-            .urgency-highlights {
-                flex-direction: column;
-                align-items: center;
-            }
+            .hero-image img { max-width: 240px; }
+            .product-image img { max-width: 240px; }
+            .pain-grid { grid-template-columns: 1fr; }
+            .urgency-highlights { flex-direction: column; align-items: center; }
+            .contextes-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
-
-    <!-- ===== NAVIGATION ===== -->
     <nav class="navbar" id="navbar">
         <a href="#" class="logo">Vision<span>Globale</span></a>
         <ul class="nav-links" id="navLinks">
-            <li><a href="#accueil" onclick="closeMenu()">Accueil</a></li>
-            <li><a href="#probleme" onclick="closeMenu()">Produit</a></li>
-            <li><a href="#produit" onclick="closeMenu()">Produit</a></li>
-            <li><a href="#offre" onclick="closeMenu()">Offre</a></li>
-            <li><a href="#commander" class="nav-cta" onclick="closeMenu()">Commander</a></li>
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#contextes">Usages</a></li>
+            <li><a href="#probleme">Problème</a></li>
+            <li><a href="#produit">Produit</a></li>
+            <li><a href="#offre">Offre</a></li>
+            <li><a href="#commander" class="nav-cta">Commander</a></li>
         </ul>
-        <div class="hamburger" id="hamburger" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+        <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
     </nav>
 
-    <!-- ===== BOUTON WHATSAPP FIXE ===== -->
-    <a href="https://wa.me/2250584193637?text=Bonjour%20Vision%20Globale%2C%20je%20souhaite%20commander%20les%20lunettes%20PhotoGray%20%C3%A0%2010%20000%20FCFA." class="btn btn-whatsapp" target="_blank" rel="noopener">
-        💬 WhatsApp
-    </a>
+    <a href="https://wa.me/2250584193637?text=Bonjour%20Vision%20Globale%2C%20je%20souhaite%20commander%20les%20lunettes%20PhotoGray." class="btn btn-whatsapp">💬 WhatsApp</a>
 
-    <!-- ===== HERO - AXE DÉSIR ===== -->
+    <div class="modal-overlay" id="commandeModal">
+        <div class="modal-form">
+            <button class="close-btn" onclick="closeModal()">✕</button>
+            <h3>✏️ Commander</h3>
+            <p class="sub">Remplissez ce formulaire, nous vous répondrons sur WhatsApp.</p>
+            <form id="orderForm" onsubmit="envoyerWhatsApp(event)">
+                <div class="form-group">
+                    <label>Nom &amp; Prénom</label>
+                    <input type="text" id="nom" placeholder="Kouadio Jean" required />
+                </div>
+                <div class="form-group">
+                    <label>Téléphone (WhatsApp)</label>
+                    <input type="tel" id="telephone" placeholder="05 84 19 36 37" required />
+                </div>
+                <div class="form-group">
+                    <label>Ville de livraison</label>
+                    <input type="text" id="ville" placeholder="Abidjan, Bouaké..." required />
+                </div>
+                <div class="form-group">
+                    <label>Informations complémentaires</label>
+                    <textarea id="message" placeholder="Adresse précise, quartier..."></textarea>
+                </div>
+                <button type="submit" class="btn-submit">💬 Envoyer sur WhatsApp</button>
+                <div class="note">🔒 Vos données sont sécurisées.</div>
+            </form>
+        </div>
+    </div>
+
+    <!-- ===== HERO ===== -->
     <section class="hero" id="accueil">
         <div class="hero-content">
             <span class="hero-badge">Nouvelle Collection</span>
             <h1>Le <span>style</span> qui prend soin de vous</h1>
-            <p>Affirmez votre regard avec des lunettes qui allient élégance et protection absolue. Confort visuel exceptionnel, du bureau à vos sorties.</p>
+            <p>Affirmez votre regard avec des lunettes qui allient élégance et protection absolue.</p>
             <div class="hero-features">
-                <span class="hero-feature"><span class="icon"></span> Design Élégant</span>
-                <span class="hero-feature"><span class="icon"></span> Ultra-Légères</span>
-                <span class="hero-feature"><span class="icon"></span> Anti-Reflet</span>
-                <span class="hero-feature"><span class="icon"></span> UV400</span>
+                <span class="hero-feature">✨ Design Élégant</span>
+                <span class="hero-feature">⚡ Ultra-Légères</span>
+                <span class="hero-feature">🛡️ Anti-Reflet</span>
+                <span class="hero-feature">☀️ UV400</span>
             </div>
             <div class="hero-price">10 000 FCFA</div>
             <div class="hero-price-small">Livraison gratuite partout en Côte d'Ivoire</div>
             <div class="hero-buttons">
                 <a href="#commander" class="btn btn-primary">🛒 Commander Maintenant</a>
-                <a href="#produit" class="btn btn-outline" style="color:#fff; border-color:#fff;">En Savoir Plus ↓</a>
+                <a href="#produit" class="btn btn-primary" style="background:transparent;color:#fff;border-color:#fff;">En Savoir Plus ↓</a>
             </div>
         </div>
         <div class="hero-image">
-            <!-- Image réelle de lunettes élégantes -->
-            <img src="https://images.unsplash.com/photo-1574258495973-f010dfbb5371?w=600&h=400&fit=crop" 
-                 alt="Lunettes PhotoGray Vision Globale - Élégantes et protectrices" 
-                 width="400" height="267"
-                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22267%22%3E%3Crect fill=%22%23222%22 width=%22400%22 height=%22267%22 rx=%2220%22/%3E%3Ctext fill=%22%23C8A96E%22 x=%22200%22 y=%22140%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2218%22%3E🕶️ Lunettes PhotoGray%3C/text%3E%3C/svg%3E'">
+<img src="img/lunette.jpeg" alt="" srcset="">
         </div>
     </section>
 
-    <!-- ===== SECTION PROBLÈME - AXE DOULEUR ===== -->
+    <!-- ===== NOUVEAU : 4 IMAGES AVEC CONTEXTE ===== -->
+    <section class="section-contextes" id="contextes">
+        <h2>Des lunettes pour chaque instant</h2>
+        <p class="section-subtitle">Adaptez votre style à toutes les situations.</p>
+        <div class="contextes-grid">
+            <div class="contexte-card">
+                <img src="img/JN.jpeg" alt="Bureau" loading="lazy" onerror="this.style.display='none'" />
+                <h3>Auto-réactive</h3>
+                <p>Filtre la lumière bleue des écrans pour réduire la fatigue oculaire et les maux de tête.</p>
+            </div>
+            
+            <!-- <div class="contexte-card">
+                <img src="img/lunette.jpeg" alt="Conduite" loading="lazy" onerror="this.style.display='none'" />
+                <h3>En voiture</h3>
+                <p>Verres anti-reflet et protection UV400 pour une conduite plus sûre et confortable.</p>
+            </div> -->
+            <div class="contexte-card">
+                <img src="img/lunette.jpeg" alt="Plein air" loading="lazy" onerror="this.style.display='none'" />
+                <h3>Extérieur & Intérieur</h3>
+                <p>Teinte adaptative qui s'assombrit au soleil pour protéger vos yeux des UV.</p>
+            </div>
+            <div class="contexte-card">
+                <img src="img/lunette.jpeg" alt="Soirée" loading="lazy" onerror="this.style.display='none'" />
+                <h3>En soirée</h3>
+                <p>Restent clairs en intérieur pour un style élégant sans compromis sur le confort.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PROBLÈME ===== -->
     <section class="section-pain" id="probleme">
         <h2>Vos yeux sont fatigués ?</h2>
         <p class="section-subtitle">Chaque jour, vos yeux subissent des agressions invisibles.</p>
         <div class="pain-grid">
             <div class="pain-card">
-                <div class="pain-icon"></div>
+                <img src="img/aff1.jpeg" alt="" srcset="">
                 <h3>Fatigue devant les écrans</h3>
-                <p>Après quelques heures devant un ordinateur ou un téléphone, vos yeux piquent et deviennent secs.</p>
+                <p>Après quelques heures, vos yeux piquent et deviennent secs.</p>
+                <button class="btn-commander-article" onclick="openModal()">🛒 Commander</button>
             </div>
-            <div class="pain-card">
-                <div class="pain-icon"></div>
+            <!-- <div class="pain-card">
+                <img src="img/TT.jpeg" alt="" srcset="">
                 <h3>Éblouissement au soleil</h3>
-                <p>Les rayons UV et les reflets agressent votre vue en extérieur, rendant la conduite inconfortable.</p>
-            </div>
+                <p>Les rayons UV et les reflets agressent votre vue en extérieur.</p>
+                <button class="btn-commander-article" onclick="openModal()">🛒 Commander</button>
+            </div> -->
             <div class="pain-card">
-                <div class="pain-icon"></div>
+                <img src="img/aff2.jpeg" alt="" srcset="">
                 <h3>Maux de tête fréquents</h3>
-                <p>La fatigue oculaire non traitée entraîne des céphalées qui gâchent votre journée.</p>
+                <p>La fatigue oculaire non traitée entraîne des céphalées.</p>
+                <button class="btn-commander-article" onclick="openModal()">🛒 Commander</button>
             </div>
         </div>
         <div class="pain-arrow">⬇</div>
         <div class="solution-box">
-            <h3>La solution : Lunettes PhotoGray</h3>
-            <p>Des verres intelligents qui s'adaptent automatiquement à la lumière pour protéger vos yeux en toutes circonstances.</p>
+            <h3>✅ La solution : Lunettes PhotoGray</h3>
+            <p>Des verres intelligents qui s'adaptent automatiquement à la lumière.</p>
             <ul class="solution-checkmarks">
                 <li>✓ Verres anti-reflet pour écrans</li>
                 <li>✓ Protection UV400 certifiée</li>
                 <li>✓ Teinte adaptative (clair → foncé)</li>
                 <li>✓ Confort visuel immédiat</li>
             </ul>
-            <a href="#commander" class="btn btn-primary">Je Protège Mes Yeux</a>
+            <button class="btn btn-primary" onclick="openModal()">Je Protège Mes Yeux</button>
         </div>
     </section>
 
-    <!-- ===== SECTION PRODUIT DÉTAILLÉ ===== -->
+    <!-- ===== PRODUIT ===== -->
     <section class="section-product" id="produit">
         <div class="product-container">
             <div class="product-image">
                 <span class="product-badge-offer">Étui Offert</span>
-                <!-- Image réelle de lunettes photochromiques -->
-                <img src="https://images.unsplash.com/photo-1591076482161-42ce6da69f67?w=600&h=600&fit=crop" 
-                     alt="Lunettes PhotoGray Vision Globale - Verres adaptatifs" 
-                     width="400" height="400"
-                     onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22400%22%3E%3Crect fill=%22%23f5f3ef%22 width=%22400%22 height=%22400%22 rx=%2220%22/%3E%3Ctext fill=%22%23C8A96E%22 x=%22200%22 y=%22200%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2250%22%3E🕶️%3C/text%3E%3C/svg%3E'">
+<img src="img/JN.jpeg" alt="" srcset="">
             </div>
             <div class="product-info">
                 <h2>Lunettes PhotoGray Vision Globale</h2>
-                <p style="color:var(--gray); margin-bottom:1rem;">Le seul modèle dont vous avez besoin. Alliez protection et élégance au quotidien.</p>
+                <p style="color:var(--gray);margin-bottom:1rem;">Alliez protection et élégance au quotidien.</p>
                 <div class="price-display">10 000 FCFA</div>
                 <div class="price-detail">Paiement à la livraison accepté</div>
                 <ul class="product-specs">
@@ -885,213 +625,127 @@
                     <li>Traitement anti-reflet haute performance</li>
                     <li>Protection UV400 (100% des UV bloqués)</li>
                     <li>Monture légère et résistante</li>
-                    <li>Design universel, convient à tous les visages</li>
+                    <li>Design universel</li>
                     <li>Étui de protection offert</li>
-                    <li>Livraison gratuite partout en Côte d'Ivoire</li>
+                    <li>Livraison gratuite en Côte d'Ivoire</li>
                 </ul>
-                <a href="#commander" class="btn btn-primary"> Je Commande Maintenant</a>
+                <button class="btn btn-primary" onclick="openModal()">Je Commande Maintenant</button>
             </div>
         </div>
     </section>
 
-    <!-- ===== SECTION GALERIE PRODUIT ===== -->
-    <section class="section-product" style="background: var(--off-white);">
-        <h2>Portez le style au quotidien</h2>
-        <p class="section-subtitle">Les lunettes PhotoGray s'adaptent à toutes les occasions.</p>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; max-width: 1100px; margin: 0 auto;">
-            <img src="https://images.unsplash.com/photo-1508296695146-257a814070b4?w=400&h=300&fit=crop" 
-                 alt="Femme portant des lunettes élégantes" 
-                 style="width:100%; height:300px; object-fit:cover; border-radius:15px;"
-                 onerror="this.style.display='none'">
-            <img src="https://images.unsplash.com/photo-1614251055883-5c0e4b3e2b1b?w=400&h=300&fit=crop" 
-                 alt="Homme d'affaires avec lunettes" 
-                 style="width:100%; height:300px; object-fit:cover; border-radius:15px;"
-                 onerror="this.style.display='none'">
-            <img src="https://images.unsplash.com/photo-1595425964072-9b4f5a5b2b3e?w=400&h=300&fit=crop" 
-                 alt="Lifestyle avec lunettes de soleil" 
-                 style="width:100%; height:300px; object-fit:cover; border-radius:15px;"
-                 onerror="this.style.display='none'">
-        </div>
-    </section>
-
-    <!-- ===== SECTION URGENCE - AXE OFFRE LIMITÉE ===== -->
+    <!-- ===== OFFRE ===== -->
     <section class="section-urgency" id="offre">
         <div class="urgency-banner">
             <h2>Offre Exceptionnelle</h2>
             <p>Pourquoi payer plus cher ailleurs ?</p>
             <div class="urgency-highlights">
-                <span class="urgency-highlight">Livraison Gratuite</span>
-                <span class="urgency-highlight">Étui Offert</span>
-                <span class="urgency-highlight">Garantie Satisfait</span>
+                <span class="urgency-highlight"> Livraison Gratuite</span>
+                <span class="urgency-highlight"> Étui Offert</span>
+                <span class="urgency-highlight"> Garantie Satisfait</span>
             </div>
             <div class="timer" id="countdown">23:59:59</div>
-            <p style="color:#aaa; margin-bottom:1.5rem;">Cette offre est disponible pour une durée limitée. Ne manquez pas cette opportunité.</p>
-            <a href="#commander" class="btn btn-primary" style="font-size:1.1rem; padding:1.2rem 3rem;">📲 Commander Avant la Fin de la Promo</a>
+            <p style="color:#aaa;margin-bottom:1.5rem;">Offre limitée. Ne manquez pas cette opportunité.</p>
+            <button class="btn btn-primary" style="font-size:1.1rem;padding:1.2rem 3rem;" onclick="openModal()">📲 Commander Maintenant</button>
         </div>
     </section>
 
-    <!-- ===== SECTION TÉMOIGNAGES ===== 
-    <section class="section-testimonials">
-        <h2>Ce Que Disent Nos Clients</h2>
-        <p class="section-subtitle">Ils ont adopté les lunettes PhotoGray Vision Globale.</p>
-        <div class="testimonials-grid">
-            <div class="testimonial-card">
-                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" 
-                     alt="Photo client" 
-                     class="testimonial-avatar"
-                     onerror="this.style.display='none'">
-                <div class="testimonial-stars">★★★★★</div>
-                <p class="testimonial-text">"Je travaille toute la journée sur ordinateur. Depuis que j'ai ces lunettes, fini les maux de tête. Et en plus, elles sont très stylées !"</p>
-                <span class="testimonial-author">— Marie K., Abidjan</span>
-            </div>
-            <div class="testimonial-card">
-                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face" 
-                     alt="Photo client" 
-                     class="testimonial-avatar"
-                     onerror="this.style.display='none'">
-                <div class="testimonial-stars">★★★★★</div>
-                <p class="testimonial-text">"Le rapport qualité-prix est incroyable. La protection solaire est top pour la conduite. Je les porte tout le temps."</p>
-                <span class="testimonial-author">— Jean-Paul Y., Yamoussoukro</span>
-            </div>
-            <div class="testimonial-card">
-                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face" 
-                     alt="Photo client" 
-                     class="testimonial-avatar"
-                     onerror="this.style.display='none'">
-                <div class="testimonial-stars">★★★★★</div>
-                <p class="testimonial-text">"Livraison rapide et gratuite, étui offert, lunettes légères... Franchement, 10 000 FCFA c'est donné ! Je recommande."</p>
-                <span class="testimonial-author">— Awa T., Bouaké</span>
-            </div>
-            
-        </div>
-    </section>-->
-
-    <!-- ===== SECTION FAQ ===== -->
+    <!-- ===== FAQ ===== -->
     <section class="section-faq">
         <h2>Questions Fréquentes</h2>
-        <p class="section-subtitle">Tout ce que vous devez savoir avant de commander.</p>
+        <p class="section-subtitle">Tout ce que vous devez savoir.</p>
         <div class="faq-container">
             <div class="faq-item" onclick="toggleFaq(this)">
                 <div class="faq-question">Comment fonctionnent les verres PhotoGray ? <span class="faq-arrow">▼</span></div>
-                <div class="faq-answer">Les verres PhotoGray contiennent des molécules photosensibles qui réagissent à la lumière UV. Ils s'assombrissent automatiquement au soleil et redeviennent clairs en intérieur.</div>
+                <div class="faq-answer">Ils contiennent des molécules photosensibles qui s'assombrissent au soleil et redeviennent clairs en intérieur.</div>
             </div>
             <div class="faq-item" onclick="toggleFaq(this)">
                 <div class="faq-question">La livraison est-elle vraiment gratuite ? <span class="faq-arrow">▼</span></div>
-                <div class="faq-answer">Oui ! La livraison est offerte partout en Côte d'Ivoire, sans minimum de commande. Vous pouvez aussi payer à la livraison.</div>
+                <div class="faq-answer">Oui ! Livraison offerte partout en Côte d'Ivoire, paiement à la livraison accepté.</div>
             </div>
             <div class="faq-item" onclick="toggleFaq(this)">
                 <div class="faq-question">Quelle est la durée de la garantie ? <span class="faq-arrow">▼</span></div>
-                <div class="faq-answer">Nous offrons une garantie satisfait ou remboursé de 7 jours. Si le produit ne vous convient pas, nous vous remboursons intégralement.</div>
+                <div class="faq-answer">Garantie satisfait ou remboursé de 7 jours.</div>
             </div>
             <div class="faq-item" onclick="toggleFaq(this)">
                 <div class="faq-question">Comment passer commande ? <span class="faq-arrow">▼</span></div>
-                <div class="faq-answer">Cliquez simplement sur le bouton WhatsApp en bas à droite de votre écran, ou sur n'importe quel bouton "Commander". Envoyez-nous votre nom et votre adresse, et nous vous livrons !</div>
+                <div class="faq-answer">Cliquez sur "Commander", remplissez le formulaire, nous vous répondons sur WhatsApp.</div>
             </div>
         </div>
     </section>
 
-    <!-- ===== SECTION COMMANDER ===== -->
-    <section class="section-urgency" id="commander" style="background: linear-gradient(135deg, #C8A96E, #B8944F); color: var(--dark);">
+    <!-- ===== COMMANDER ===== -->
+    <section class="section-urgency" id="commander" style="background:linear-gradient(135deg,#C8A96E,#B8944F);color:var(--dark);">
         <div class="urgency-banner">
             <h2 style="color:var(--dark);">Prêt à Protéger Vos Yeux ?</h2>
-            <p style="color:var(--dark-secondary); font-size:1.1rem;">Commandez dès maintenant et recevez vos lunettes PhotoGray avec un étui offert.</p>
+            <p style="color:var(--dark-secondary);">Commandez dès maintenant et recevez vos lunettes PhotoGray.</p>
             <div class="hero-price" style="color:var(--dark);">10 000 FCFA</div>
-            <div class="hero-price-small" style="color:var(--dark-secondary);">Livraison gratuite partout en Côte d'Ivoire</div>
-            <div style="margin-top:1.5rem;">
-                <a href="https://wa.me/22584193637?text=Bonjour%20Vision%20Globale%2C%20je%20souhaite%20commander%20les%20lunettes%20PhotoGray%20%C3%A0%2010%20000%20FCFA.%20Voici%20mon%20nom%20et%20mon%20adresse%20%3A" class="btn" style="background:var(--dark); color:var(--white); border-color:var(--dark); font-size:1.1rem; padding:1.2rem 3rem;" target="_blank" rel="noopener">
-                    💬 Commander via WhatsApp
-                </a>
-            </div>
+            <div class="hero-price-small" style="color:var(--dark-secondary);">Livraison gratuite</div>
+            <button class="btn" style="background:var(--dark);color:var(--white);border-color:var(--dark);font-size:1.1rem;padding:1.2rem 3rem;margin-top:1rem;" onclick="openModal()">💬 Commander via WhatsApp</button>
         </div>
     </section>
 
-    <!-- ===== FOOTER ===== -->
     <footer class="footer">
         <div class="footer-logo">Vision<span>Globale</span></div>
         <p>Lunettes PhotoGray - Protection & Élégance</p>
         <p class="footer-contact">📲 WhatsApp : +225 0584193637</p>
-        <p style="margin-top:1rem;">© 2026 Vision Globale. Tous droits réservés.</p>
-        <p>Livraison gratuite partout en Côte d'Ivoire 🇨🇮</p>
+        <p>© 2026 Vision Globale. Livraison gratuite en Côte d'Ivoire 🇨🇮</p>
     </footer>
 
     <script>
-        // ===== MENU MOBILE =====
-        const hamburger = document.getElementById('hamburger');
-        const navLinks = document.getElementById('navLinks');
-
-        function toggleMenu() {
-            navLinks.classList.toggle('active');
-        }
-
-        function closeMenu() {
-            navLinks.classList.remove('active');
-        }
-
-        // ===== NAVBAR SCROLL EFFECT =====
         const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
+        const navLinks = document.getElementById('navLinks');
+        const hamburger = document.getElementById('hamburger');
+        const modal = document.getElementById('commandeModal');
+
+        hamburger.addEventListener('click', () => navLinks.classList.toggle('active'));
+        document.querySelectorAll('.nav-links a').forEach(link => link.addEventListener('click', () => navLinks.classList.remove('active')));
+
+        window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 50));
+
+        function toggleFaq(el) { el.classList.toggle('active'); }
+
+        let seconds = 86400;
+        setInterval(() => {
+            if (seconds <= 0) seconds = 86400;
+            const h = String(Math.floor(seconds / 3600)).padStart(2, '0');
+            const m = String(Math.floor((seconds % 3600) / 60)).padStart(2, '0');
+            const s = String(seconds % 60).padStart(2, '0');
+            document.getElementById('countdown').textContent = `${h}:${m}:${s}`;
+            seconds--;
+        }, 1000);
+
+        function openModal() { modal.classList.add('active'); document.body.style.overflow = 'hidden'; }
+        function closeModal() { modal.classList.remove('active'); document.body.style.overflow = ''; }
+        modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+
+        function envoyerWhatsApp(e) {
+            e.preventDefault();
+            const nom = document.getElementById('nom').value.trim() || 'Non renseigné';
+            const tel = document.getElementById('telephone').value.trim() || 'Non renseigné';
+            const ville = document.getElementById('ville').value.trim() || 'Non renseignée';
+            const msg = document.getElementById('message').value.trim();
+            let texte = `👓 Commande Lunettes PhotoGray%0A Nom: ${nom}%0A Tél: ${tel}%0A Ville: ${ville}`;
+            if (msg) texte += `%0A Info: ${msg}`;
+            texte += `%0A💰 Prix: 10 000 FCFA (livraison gratuite)`;
+            window.open(`https://wa.me/2250584193637?text=${texte}`, '_blank');
+            closeModal();
+            document.getElementById('orderForm').reset();
+        }
+
+        document.querySelectorAll('.pain-card, .solution-box, .testimonial-card, .product-image, .product-info, .contexte-card').forEach(el => {
+            el.style.opacity = '1';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         });
-
-        // ===== FAQ ACCORDION =====
-        function toggleFaq(element) {
-            element.classList.toggle('active');
-        }
-
-        // ===== COUNTDOWN TIMER =====
-        function startCountdown() {
-            let totalSeconds = 86400; // 24 heures
-            const countdownEl = document.getElementById('countdown');
-
-            function updateTimer() {
-                const hours = Math.floor(totalSeconds / 3600);
-                const minutes = Math.floor((totalSeconds % 3600) / 60);
-                const seconds = totalSeconds % 60;
-
-                countdownEl.textContent = 
-                    String(hours).padStart(2, '0') + ':' + 
-                    String(minutes).padStart(2, '0') + ':' + 
-                    String(seconds).padStart(2, '0');
-
-                if (totalSeconds > 0) {
-                    totalSeconds--;
-                } else {
-                    totalSeconds = 86400;
-                }
-            }
-
-            updateTimer();
-            setInterval(updateTimer, 1000);
-        }
-
-        startCountdown();
-
-        // ===== ANIMATION AU SCROLL =====
-        const observerOptions = {
-            threshold: 0.15,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
+        new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.style.opacity = '1';
                     entry.target.style.transform = 'translateY(0)';
                 }
             });
-        }, observerOptions);
-
-        document.querySelectorAll('.pain-card, .solution-box, .testimonial-card, .product-image, .product-info').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
-            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(el);
-        });
+        }, { threshold: 0.15 }).observe(document.querySelector('.contexte-card') || document.querySelector('.pain-card'));
     </script>
-
 </body>
 </html>
